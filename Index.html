@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <base target="_top">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <?!= include('Stylesheet'); ?>
+</head>
+<body>
+  <!-- Login -->
+  <div id="login-view" class="login-wrap hidden">
+    <form id="login-form" class="login-card" autocomplete="on">
+      <div class="login-logo" id="login-logo"></div>
+      <h1 id="login-shop">ระบบบัญชีร้าน</h1>
+      <p>เข้าสู่ระบบเพื่อบันทึกรายรับ–รายจ่าย</p>
+      <div id="login-error" class="login-error hidden"></div>
+      <div class="field">
+        <label for="lg-user">ชื่อผู้ใช้</label>
+        <input id="lg-user" name="username" class="input" autocomplete="username" autocapitalize="none" required>
+      </div>
+      <div class="field">
+        <label for="lg-pass">รหัสผ่าน</label>
+        <input id="lg-pass" name="password" type="password" class="input" autocomplete="current-password" required>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit" id="lg-btn">เข้าสู่ระบบ</button>
+    </form>
+  </div>
+
+  <!-- App -->
+  <div id="app" class="shell hidden">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo" id="brand-logo"></div>
+        <div><div class="brand-name" id="brand-name"></div><div class="brand-sub">ระบบบัญชีร้าน</div></div>
+      </div>
+      <nav class="nav" id="side-nav"></nav>
+      <div class="sidebar-foot">
+        <button class="user-chip" id="side-user"></button>
+        <button class="nav-btn logout-btn" id="side-logout"></button>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><h2 id="page-title"></h2><div class="sub" id="page-sub"></div></div>
+        <div class="topbar-mobile-user">
+          <button class="icon-btn" id="mobile-user" title="บัญชีของฉัน"></button>
+          <button class="icon-btn logout-icon" id="mobile-logout" title="ออกจากระบบ"></button>
+        </div>
+      </header>
+      <section class="page" id="page"></section>
+    </main>
+    <nav class="bottom-nav" id="bottom-nav"></nav>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+  <div id="loader" class="loader hidden"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <?!= include('JavaScript'); ?>
+</body>
+</html>

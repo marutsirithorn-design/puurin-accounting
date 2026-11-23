@@ -1,0 +1,14 @@
+# ไฟล์ทดลองใช้ (สร้างใหม่ได้ด้วย: node tools/build-preview.js)
+preview/
+
+# clasp (ถ้าตั้งค่าส่งโค้ดขึ้น Apps Script ภายหลัง)
+.clasp.json
+.clasprc.json
+
+# ระบบปฏิบัติการ / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+node_modules/
